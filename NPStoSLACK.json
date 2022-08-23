@@ -1,0 +1,46 @@
+{
+  "type":"home",
+  "blocks":[
+    {
+      "type":"header",
+      "text":{
+        "type":"plain_text",
+        "text":"Account - {{account.account_name}}"
+       }
+    },
+    {
+      "type":"divider"
+    },
+    {
+      "type":"context",
+      "elements":[
+        {
+          "type":"image",
+          "image_url":"https://uploads-ssl.webflow.com/5abc6c4b0a243a475139ee3b/604794d2481099ddcc3d362e_webhook-user.png",
+"alt_text":"{{user.First Name}}"
+        },
+        {
+          "type":"mrkdwn",
+          "text":"*<https:YOURURL/#/users/{{user.User Id}}|{{user.First Name}} {{user.Last Name}}>*"
+        },
+        {
+          "type":"mrkdwn",
+          "text":"responded to NPS Survey"
+        }
+      ]
+    },
+    {
+      "type":"section",
+      "text":{
+      "type":"mrkdwn",
+      "text":"NPS Score: *{{user.Relationship NPS}}*\nSurvey Response Date: *{{user.Relationship NPS_response_date}}*\nNPS Comment: *{{user.Relationship NPS_comment}}*"
+    },
+    "accessory":{
+      "type":"image",
+      "image_url":"https://uploads-ssl.webflow.com/5abc6c4b0a243a475139ee3b/604794d2596186bcd75ebd30_webhook-detractor.png",
+      "alt_text":"Detractor"
+    }
+  }
+  ]
+}
+{"success":true}
